@@ -87,7 +87,7 @@ const ProductEditScreen = () => {
       };
 
       const { data } = await axios.post(
-        "/api/products/upload/",
+        "https://nirshop-apinew.onrender.com/api/products/upload/",
         formData,
         config
       );

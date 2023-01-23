@@ -23,7 +23,7 @@ import {
 export const listProducts = (keyword = '') => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
-    const { data } = await axios.get(`/api/products${keyword}`);
+    const { data } = await axios.get(`https://nirshop-apinew.onrender.com/api/products${keyword}`);
 
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
@@ -43,7 +43,7 @@ export const listProducts = (keyword = '') => async (dispatch) => {
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    const { data } = await axios.get(`/api/products/${id}`);
+    const { data } = await axios.get(`https://nirshop-apinew.onrender.com/api/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -77,7 +77,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.delete(`/api/products/delete/${id}/`, config);
+    const { data } = await axios.delete(`https://nirshop-apinew.onrender.com/api/products/delete/${id}/`, config);
 
     dispatch({
       type: PRODUCT_DELETE_SUCCESS,
@@ -110,7 +110,7 @@ export const createProduct = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(`/api/products/create/`, {}, config);
+    const { data } = await axios.post(`https://nirshop-apinew.onrender.com/api/products/create/`, {}, config);
     dispatch({
       type: PRODUCT_CREATE_SUCCESS,
       payload: data,
@@ -144,7 +144,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `/api/products/update/${product._id}/`,
+      `https://nirshop-apinew.onrender.com/api/products/update/${product._id}/`,
       product,
       config
     );
@@ -186,7 +186,7 @@ export const createProductReview = (productId, review) => async (dispatch, getSt
       }
 
       const { data } = await axios.post(
-          `/api/products/${productId}/reviews/`,
+          `https://nirshop-apinew.onrender.com/api/products/${productId}/reviews/`,
           review,
           config
       )

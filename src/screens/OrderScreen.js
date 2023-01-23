@@ -151,7 +151,7 @@ const OrderScreen = () => {
                       <Row>
                         <Col md={2}>
                           <Image
-                            src={item.image}
+                            src={`https://nirshop-apinew.onrender.com${item.image}`}
                             alt={item.name}
                             fluid
                             rounded

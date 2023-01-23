@@ -20,7 +20,7 @@ export const addToCart = (id, qty) => async dispatch => {
     // if not exist, proceed
     if (duplicates.length === 0) {
         // prerp product data
-        const { data } = await axios.get(`/api/products/${id}`)
+        const { data } = await axios.get(`https://nirshop-apinew.onrender.com/api/products/${id}`)
         const productToAdd = {
             ...data,
             qty
