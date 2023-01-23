@@ -80,7 +80,7 @@ const ProductScreen = () => {
         <div>
           <Row>
             <Col md={6}>
-              <Image src={`https://nirshop-apinew.onrender.com/static/images/${product.image}`} alt={product.name} fluid />
+              <Image src={`https://nirshop-apinew.onrender.com/static/images${product.image}`} alt={product.name} fluid />
             </Col>
             <Col md={3}>
               <ListGroup variant="flush">
