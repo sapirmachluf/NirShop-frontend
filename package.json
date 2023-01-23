@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "https://nirshop-api.onrender.com",
+  "proxy": "https://nirshop-apinew.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
